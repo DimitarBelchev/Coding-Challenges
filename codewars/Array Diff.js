@@ -7,7 +7,16 @@
 
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 function arrayDiff(a, b) {
-  // Filter entire a array, only keep the value if b does not contain that value
-  return a.filter((val) => !b.includes(val));
+  return a.filter((e) => !b.includes(e));
 }
+console.log(arrayDiff([1, 2, 2], [2]));
 console.log(arrayDiff([1, 2, 2], [1]));
+
+// function arrayDiff(a, b) {
+//   const arr = a.concat(b);
+//   return arr.filter((item, _, a) => a.lastIndexOf(item) === a.indexOf(item));
+// }
+
+// console.log(arrayDiff([1, 2], [1]));
+// console.log(arrayDiff([1, 2, 2], [1]));
+// console.log(arrayDiff([1, 2, 3], [1]));
