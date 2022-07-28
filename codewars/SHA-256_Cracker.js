@@ -9,33 +9,30 @@
 
 // Input String: I am converting string to hash.
 // Hash Value: ceb443790638fbc0f543ccf80a08085a731c83a6fd1843c3c3ff2e6edd86c58b
+const crypto = require("crypto");
+hashes = crypto.getHashes();
+
+let findPermutations = (string) => {
+  if (string.length <= 2)
+    return string.length === 2 ? [string, string[1] + string[0]] : [string];
+  return string
+    .split("")
+    .reduce(
+      (acc, letter, i) =>
+        acc.concat(
+          findPermutations(string.slice(0, i) + string.slice(i + 1)).map(
+            (val) => letter + val
+          )
+        ),
+      []
+    );
+};
+
+let sha = (chars) => crypto.createHash("sha256").update(chars).digest("hex");
 
 function sha256Cracker(hash, chars) {
-  const crypto = require("crypto");
-  hashes = crypto.getHashes();
-  let findPermutations = (string) => {
-    if (!string || typeof string !== "string") {
-      return "Please enter a string";
-    } else if (string.length < 2) {
-      return string;
-    }
-
-    let permutationsArray = [];
-
-    for (let i = 0; i < string.length; i++) {
-      let char = string[i];
-
-      let remainingChars =
-        string.slice(0, i) + string.slice(i + 1, string.length);
-
-      for (let permutation of findPermutations(remainingChars)) {
-        permutationsArray.push(char + permutation);
-      }
-    }
-    return permutationsArray;
-  };
   const perm = findPermutations(chars);
-  let sha = (chars) => crypto.createHash("sha256").update(chars).digest("hex");
+  console.log(perm);
 
   for (i = 0; i < perm.length; i++) {
     if (sha(perm[i]) === hash) {
