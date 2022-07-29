@@ -19,10 +19,10 @@ function solution(input, markers) {
   let splitted;
   let substr;
   let first;
-  const checker = (value) =>
-    !markers.some((element) => value.includes(element));
+  const checker = (strArr) => !markers.some((el) => strArr.includes(el));
   for (let i = 0; i < input.length; i++) {
     splitted = input[i].trim().replace('"', "").split("");
+
     if (checker(splitted)) {
       finalArr.push(input[i]);
     } else {
