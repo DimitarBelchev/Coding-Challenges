@@ -13,7 +13,7 @@ function divisibleCount(x, y, k) {
 //   return Math.floor(y / k) - Math.floor((x - 1) / k);
 // }
 
-divisibleCount(6, 11, 2);
+// divisibleCount(6, 11, 2);
 
 // let divisors = (n) => {
 //   let divisorsArr = [];
