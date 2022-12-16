@@ -1,53 +1,20 @@
 function upArray(arr) {
-  let arrRev = arr.reverse();
-  let counter = 0;
-  let add = false;
-
-  for (let i = 0; i <= arrRev.length - 1; i++) {
-    if (arrRev[i] < 0 || arrRev[i] > 9) return null;
-    if (arrRev[i] === 9) {
-      for (let j = i; j <= arrRev.length - 1; j++) {
-        console.log(i);
-        // console.log("j" + arrRev[j]);
-        counter++;
-        // console.log(counter);
-
-        if (arrRev[j] != 9) {
-          i += counter;
-          counter = 0;
-          break;
-        }
-      }
-    }
-
-    // if (add) {
-    //   if (arrRev[i] === 9) {
-    //     arrRev[i] = 0;
-    //     counter++;
-    //     add = true;
-    //   } else {
-    //     arrRev[i] += 1;
-    //     break;
-    //   }
-    //   arrRev[i] += 1;
-    //   add = false;
-    // }
-    // if (arrRev[i] === 9) {
-    //   arrRev[i] = 0;
-    //   counter = 1;
-    //   add = true;
-    // } else {
-    //   arrRev[i] += 1;
-    //   break;
-    // }
+  if (
+    !Array.isArray(arr) ||
+    !arr.every((x) => typeof x === "number" && x >= 0 && x < 10) ||
+    arr.length === 0
+  ) {
+    return null;
   }
-  return arrRev.reverse();
+  const result = new Array(arr.length).fill(0);
+  let carry = 1;
+  for (let i = arr.length - 1; i >= 0; i--) {
+    result[i] = (arr[i] + carry) % 10;
+    carry = Math.floor((arr[i] + carry) / 10);
+  }
+  if (carry > 0) {
+    result.unshift(carry);
+  }
+
+  return result;
 }
-// console.log(upArray([4, 3, 2, 5]));
-// console.log(upArray([2, 3, 9, 9]));
-console.log(upArray([2, 9, 9, 9, 3, 9, 9]));
-// console.log(upArray([9, 9]));
-// console.log(upArray([0, 7]));
-// console.log(
-//   upArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
-// );
