@@ -5,12 +5,8 @@ function landPerimeter(arr) {
   const max = width * height;
   let neighbours = 0;
   let area = 0;
-  let counter = 2;
-  let jCounter = 2;
   let count = 0;
-  let row = 1;
   for (let i = 0; i < width; i++) {
-    counter++;
     //end
     if (i === width - 1) {
       if (fullArea[i] === "X") {
