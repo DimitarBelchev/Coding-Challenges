@@ -15,6 +15,7 @@ let twoSum = function (nums, target) {
       }
     }
   }
+  console.log(answer);
   return answer;
 };
 console.log(twoSum([3, 2, 4], 6));
