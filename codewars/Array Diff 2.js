@@ -7,15 +7,28 @@
 
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 function arrayDiff(a, b) {
-  return a.filter((e) => !b.includes(e));
-}
-console.log(arrayDiff([1, 2, 2], [2]));
-console.log(arrayDiff([1, 2, 2], [1]));
+  if (a.length === 0) {
+    return [];
+  }
+  if (b.length === 0) {
+    return a;
+  }
+  let newA = a;
+  let newB = b;
+  // [1, 2, 2, 3] [2, 3]
+  a.forEach((arrItem, arrIndex) => {
+    const aCopy = newA.slice();
+    const bCopy = newB.slice();
+    // We have found this element in both arrays
+    if (b.includes(arrItem)) {
+      newA = aCopy.filter((item) => item !== arrItem);
+      newB = bCopy.filter((item) => item !== arrItem);
+    }
+  });
 
-// function arrayDiff(a, b) {
-//   const arr = a.concat(b);
-//   return arr.filter((item, _, a) => a.lastIndexOf(item) === a.indexOf(item));
-// }
+  console.log(newA);
+  return newA;
+}
 
 // console.log(arrayDiff([1, 2], [1]));
 // console.log(arrayDiff([1, 2, 2], [1]));
