@@ -6,17 +6,17 @@
 // ""             =>  ""
 
 // complete the function
-// function solution(string) {
-//   let newStr = [];
-//   for (i = 0; i < string.length; i++) {
-//     if (string[i].toUpperCase() !== string[i]) {
-//       newStr.push(string[i]);
-//     } else {
-//       newStr.push(" ");
-//       newStr.push(string[i]);
-//     }
-//   }
+function solution(string) {
+  let newStr = [];
+  for (i = 0; i < string.length; i++) {
+    if (string[i].toUpperCase() !== string[i]) {
+      newStr.push(string[i]);
+    } else {
+      newStr.push(" ");
+      newStr.push(string[i]);
+    }
+  }
 
-//   return newStr.join("");
-// }
-// console.log(solution("camelCasing"));
+  return newStr.join("");
+}
+console.log(solution("camelCasing"));
