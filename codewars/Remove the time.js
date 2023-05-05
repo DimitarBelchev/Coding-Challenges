@@ -1,5 +1,3 @@
 function shortenToDate(longDate) {
-  const dateParts = longDate.split(", ");
-  return dateParts[0] + " " + dateParts[1].split(" ")[1];
+  return longDate.substring(0, longDate.indexOf(","));
 }
-console.log(shortenToDate("Friday May 2, 9am"));
