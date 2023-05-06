@@ -35,7 +35,7 @@ function pickPeaks(arr) {
   return result;
 }
 console.log(pickPeaks([1, 2, 3, 6, 4, 1, 2, 3, 2, 1]));
-console.log(pickPeaks([3, 2, 3, 6, 4, 1, 2, 3, 2, 1, 2, 3]));
+// console.log(pickPeaks([3, 2, 3, 6, 4, 1, 2, 3, 2, 1, 2, 3]));
 // console.log(pickPeaks([3, 2, 3, 6, 4, 1, 2, 3, 2, 1, 2, 2, 2, 1]));
 // console.log(pickPeaks([2, 1, 3, 2, 2, 2, 2, 1]));
 // {pos:[3,7,10], peaks:[6,3,2]}
