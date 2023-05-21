@@ -35,6 +35,13 @@
 
 .card {
   padding: 2em;
+  border: 1px;
+  border-style: double;
+}
+.card-inner {
+  padding: 2em;
+  border: 1px;
+  border-style: double;
 }
 
 .read-the-docs {
