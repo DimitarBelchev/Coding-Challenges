@@ -11,15 +11,17 @@ const Mapandfilter = () => {
   }, []);
 
   const mapData = () => {
+    let lessThanFive = numbers
+      .map((number) => number * number)
+      .filter((number) => number <= 50);
+
+    setNumbers(lessThanFive);
+
     // let filteredData = users.filter((user) => {
     // return user.name === "Leanne Graham";
     // return user.name.includes("L");
     // return user.id <= 5;
 
-    let square = numbers.map((number) => {
-      return number * number;
-    });
-    console.log(square);
     // });
     // setUsers(filteredData);
     // console.log(filteredData);
