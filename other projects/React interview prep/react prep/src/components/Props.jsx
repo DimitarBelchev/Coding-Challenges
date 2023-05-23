@@ -5,6 +5,7 @@ import Child from "./Child";
 const Props = () => {
   const [name, setName] = useState("Steve");
   const changeName = (value) => {
+    console.log();
     setName(value);
   };
   return (
