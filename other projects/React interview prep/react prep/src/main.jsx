@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 // import Mapandfilter from "./components/Mapandfilter.jsx";
 // import States from "./components/States.jsx";
 // import Props from "./components/Props.jsx";
+// import CondExpr from "./components/CondExpr.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -12,5 +13,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <Mapandfilter /> */}
     {/* <States /> */}
     {/* <Props /> */}
+    {/* <CondExpr /> */}
   </React.StrictMode>
 );
