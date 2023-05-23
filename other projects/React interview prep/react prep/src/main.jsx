@@ -5,6 +5,7 @@ import ReactDOM from "react-dom/client";
 // import States from "./components/States.jsx";
 // import Props from "./components/Props.jsx";
 // import CondExpr from "./components/CondExpr.jsx";
+import Events from "./components/Events.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -14,5 +15,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <States /> */}
     {/* <Props /> */}
     {/* <CondExpr /> */}
+    <Events />
   </React.StrictMode>
 );
