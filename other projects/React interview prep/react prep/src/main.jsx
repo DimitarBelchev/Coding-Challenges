@@ -17,6 +17,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <Props /> */}
     {/* <CondExpr /> */}
     {/* <Events /> */}
-    <Forms />
+    {/* <Forms /> */}
   </React.StrictMode>
 );
