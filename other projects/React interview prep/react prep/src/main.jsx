@@ -6,7 +6,7 @@ import ReactDOM from "react-dom/client";
 // import Props from "./components/Props.jsx";
 // import CondExpr from "./components/CondExpr.jsx";
 // import Events from "./components/Events.jsx";
-import Forms from "./components/Forms.jsx";
+// import Forms from "./components/Forms.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
