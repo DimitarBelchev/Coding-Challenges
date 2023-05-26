@@ -7,7 +7,8 @@ import ReactDOM from "react-dom/client";
 // import CondExpr from "./components/CondExpr.jsx";
 // import Events from "./components/Events.jsx";
 // import Forms from "./components/Forms.jsx";
-import Restapi from "./components/Restapi.jsx";
+// import Restapi from "./components/Restapi.jsx";
+import Debouncing from "./components/Debouncing.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <CondExpr /> */}
     {/* <Events /> */}
     {/* <Forms /> */}
-    <Restapi />
+    {/* <Restapi /> */}
+    <Debouncing />
   </React.StrictMode>
 );
