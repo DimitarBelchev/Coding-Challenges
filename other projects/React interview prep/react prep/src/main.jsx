@@ -8,7 +8,8 @@ import ReactDOM from "react-dom/client";
 // import Events from "./components/Events.jsx";
 // import Forms from "./components/Forms.jsx";
 // import Restapi from "./components/Restapi.jsx";
-import Debouncing from "./components/Debouncing.jsx";
+// import Debouncing from "./components/Debouncing.jsx";
+import Filter from "./components/Filter.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <Events /> */}
     {/* <Forms /> */}
     {/* <Restapi /> */}
-    <Debouncing />
+    {/* <Debouncing /> */}
+    <Filter />
   </React.StrictMode>
 );
