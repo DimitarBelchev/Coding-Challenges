@@ -7,6 +7,7 @@ import ReactDOM from "react-dom/client";
 // import CondExpr from "./components/CondExpr.jsx";
 // import Events from "./components/Events.jsx";
 // import Forms from "./components/Forms.jsx";
+import RestApi from "./components/RestApi.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -18,5 +19,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <CondExpr /> */}
     {/* <Events /> */}
     {/* <Forms /> */}
+    <RestApi />
   </React.StrictMode>
 );
