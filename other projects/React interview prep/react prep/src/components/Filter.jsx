@@ -5,11 +5,18 @@ function Filter() {
   const [users, setUsers] = useState([]);
   const [searched, setSeached] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const getData = () => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((json) => setUsers(json));
+  const getData = async () => {
+    try {
+      const fetchAPI = await fetch(
+        "https://jsonplaceholder.typicode.com/users"
+      );
+      const response = await fetchAPI.json();
+      setUsers(response);
+    } catch (error) {
+      console.error(error);
+    }
   };
+
   useEffect(() => {
     getData();
   }, []);

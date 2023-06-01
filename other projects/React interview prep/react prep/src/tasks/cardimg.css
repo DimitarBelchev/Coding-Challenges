@@ -1,0 +1,16 @@
+.cardimg {
+  max-width: 30wx;
+}
+
+.cardName {
+  font-size: 20px;
+}
+
+.cardBreedAge {
+  color: gray;
+}
+
+.card {
+  max-width: 30wx;
+  border: 1px solid black;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import App from './App.jsx'
+import App from "./App.jsx";
 // import Mapandfilter from "./components/Mapandfilter.jsx";
 // import States from "./components/States.jsx";
 // import Props from "./components/Props.jsx";
@@ -9,12 +9,17 @@ import ReactDOM from "react-dom/client";
 // import Forms from "./components/Forms.jsx";
 // import Restapi from "./components/Restapi.jsx";
 // import Debouncing from "./components/Debouncing.jsx";
-import Filter from "./components/Filter.jsx";
+// import Filter from "./components/Filter.jsx";
+// import IndiaTest from "./components/IndiaTest.jsx";
+// import IndiaTest from "./components/IndiaTest.jsx";
+// import MapUsers from "./tasks/MapUsers.jsx";
+// import Modal from "./tasks/Modal.jsx";
+// import DataBinding from "./tasks/DataBinding.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <App /> */}
+    <App />
     {/* <Mapandfilter /> */}
     {/* <States /> */}
     {/* <Props /> */}
@@ -23,6 +28,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <Forms /> */}
     {/* <Restapi /> */}
     {/* <Debouncing /> */}
-    <Filter />
+    {/* <Filter /> */}
+    {/* <IndiaTest /> */}
+    {/* <IndiaTest /> */}
+    {/* <MapUsers /> */}
+    {/* <Modal /> */}
+    {/* <DataBinding /> */}
   </React.StrictMode>
 );
