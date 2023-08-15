@@ -27,4 +27,13 @@
 
 //   return ccModified.join("");
 // }
-// console.log(maskify("Skippy"));
+
+function maskify(cc) {
+  return [...cc]
+    .map((x, i) => {
+      return i < cc.length - 4 ? "#" : x;
+    })
+    .join("");
+}
+
+console.log(maskify("Skippy"));

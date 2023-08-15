@@ -4,7 +4,7 @@ function computeDepth(x) {
   const reqNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   while (!reqNumbers.every((i) => numArr.includes(i))) {
     numArr.push(Array.from(String(x * counter), Number));
-    numArr = numArr.reduce((acc, val) => acc.concat(val), []);
+    numArr = numArr.reduce((acc, cur) => acc.concat(cur), []);
     counter++;
   }
   return counter - 1;

@@ -7,16 +7,27 @@
 // "(( @"     =>  "))(("
 // Notes
 // Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
+
+// function duplicateEncode(word) {
+//   let arr = Array.from(word.toLowerCase());
+//   let temp = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) {
+//       temp.push("(");
+//     } else {
+//       temp.push(")");
+//     }
+//   }
+//   return temp.join("");
+// }
+// console.log(duplicateEncode("(( @"));
+
 function duplicateEncode(word) {
-  let arr = Array.from(word.toLowerCase());
-  let temp = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) {
-      temp.push("(");
-    } else {
-      temp.push(")");
-    }
-  }
-  return temp.join("");
+  return word
+    .toLowerCase()
+    .split("")
+    .map(function (a, _, w) {
+      return w.indexOf(a) == w.lastIndexOf(a) ? "(" : ")";
+    })
+    .join("");
 }
-console.log(duplicateEncode("(( @"));
