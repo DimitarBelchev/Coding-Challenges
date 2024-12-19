@@ -20,20 +20,20 @@ minCostHashMap(cost1); //output: 15
 const cost2 = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1];
 minCostHashMap(cost2); //output: 6
 
-// function minCostFullTable(cost) {
-//   const dp = Array(cost.length).fill(0);
-//   dp[0] = cost[0];
-//   dp[1] = cost[1];
+function minCostFullTable(cost) {
+  const dp = Array(cost.length).fill(0);
+  dp[0] = cost[0];
+  dp[1] = cost[1];
 
-//   for (let i = 2; i < cost.length; i++) {
-//     dp[i] = cost[i] + Math.min(dp[i - 1], dp[i - 2]);
-//   }
+  for (let i = 2; i < cost.length; i++) {
+    dp[i] = cost[i] + Math.min(dp[i - 1], dp[i - 2]);
+  }
 
-//   return Math.min(dp[cost.length - 1], dp[cost.length - 2]);
-// }
+  return Math.min(dp[cost.length - 1], dp[cost.length - 2]);
+}
 
-// const cost1 = [10, 15, 20];
-// minCostFullTable(cost1); //output: 15
+const cost1 = [10, 15, 20];
+minCostFullTable(cost1); //output: 15
 
-// const cost2 = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1];
-// minCostFullTable(cost2); //output: 6
+const cost2 = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1];
+minCostFullTable(cost2); //output: 6
