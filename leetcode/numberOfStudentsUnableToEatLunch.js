@@ -23,28 +23,28 @@
 // const sandwiches2 = [1, 0, 0, 0, 1, 1];
 // countStudentsUnableToEatGreedyMatching(students2, sandwiches2); //output: 3
 
-// function countStudentsUnableToEatRotateAndCount(students, sandwiches) {
-//   let queue = students.slice();
-//   let stack = sandwiches.slice();
-//   let attempts = 0;
+function countStudentsUnableToEatRotateAndCount(students, sandwiches) {
+  let queue = students.slice();
+  let stack = sandwiches.slice();
+  let attempts = 0;
 
-//   while (attempts < queue.length) {
-//     if (queue[0] === stack[0]) {
-//       queue.shift();
-//       stack.shift();
-//       attempts = 0;
-//     } else {
-//       queue.push(queue.shift());
-//       attempts++;
-//     }
-//   }
-//   return queue.length;
-// }
+  while (attempts < queue.length) {
+    if (queue[0] === stack[0]) {
+      queue.shift();
+      stack.shift();
+      attempts = 0;
+    } else {
+      queue.push(queue.shift());
+      attempts++;
+    }
+  }
+  return queue.length;
+}
 
-// const students1 = [1, 1, 0, 0];
-// const sandwiches1 = [0, 1, 0, 1];
-// countStudentsUnableToEatRotateAndCount(students1, sandwiches1); //output: 0
+const students1 = [1, 1, 0, 0];
+const sandwiches1 = [0, 1, 0, 1];
+countStudentsUnableToEatRotateAndCount(students1, sandwiches1); //output: 0
 
-// const students2 = [1, 1, 1, 0, 0, 1];
-// const sandwiches2 = [1, 0, 0, 0, 1, 1];
-// countStudentsUnableToEatRotateAndCount(students2, sandwiches2); //output: 3
+const students2 = [1, 1, 1, 0, 0, 1];
+const sandwiches2 = [1, 0, 0, 0, 1, 1];
+countStudentsUnableToEatRotateAndCount(students2, sandwiches2); //output: 3
